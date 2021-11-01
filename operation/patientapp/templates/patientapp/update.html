@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div style='text-align: center; max-width: 500px; margin: 4rem auto'>
+  <div><h4>환자 정보 변경</h4></div>
+
+  <form action="{% url 'patientapp:update' pk=target_patient.pk %}" method="POST"  enctype="multipart/form-data">
+    {{form.as_p}}
+
+    {% csrf_token %}
+
+    <input type="submit" class="btn btn-dark rounded-pill col-6 mt-3">
+  </form>
+
+</div>
+
+
+{% endblock %}

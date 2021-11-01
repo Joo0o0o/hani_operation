@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div style='text-align: center; max-width: 500px; margin: 4rem auto'>
+  <div>
+    <p>
+      {{ target_patient.created_at }}
+    </p>
+    <h2 style="font-family:'NanumSquareB';">
+      {{ target_patient.name }}
+    </h2>
+    <a href="{% url 'patientapp:update' pk=target_patient.pk %}">
+          변경
+    </a>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

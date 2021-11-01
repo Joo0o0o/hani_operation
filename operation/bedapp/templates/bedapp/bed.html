@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<div style='text-align: center; max-width: 500px; margin: 4rem auto'>
+
+  <div class="container">
+  <div class="row">
+    {% for bed in beds%}
+    <div class="col">
+      {{ bed.bed_num }}
+    </div>
+    {% endfor %}
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+{% endblock %}
